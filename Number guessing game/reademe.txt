@@ -1,0 +1,36 @@
+# Number Guessing Game
+
+A fun and interactive command-line number guessing game built with Python. The player chooses a difficulty level and has a limited number of attempts to guess a secret number between 1 and 100.
+
+## Features
+
+-   **Difficulty Selection:** Choose between 'easy' (10 attempts) or 'hard' (5 attempts) modes.
+-   **Input Validation:** Checks for out-of-range guesses and provides feedback.
+-   **Game Loop:** The core logic is contained within a `while` loop that manages attempts.
+-   **Replayability:** After each game, the user is prompted to play again or quit.
+-   **Modular Design:** The game logic is separated into a dedicated `game()` function.
+
+## How to Run
+
+1.  Make sure you have Python installed on your system.
+2.  Save the code as a Python file (e.g., `main.py`).
+3.  Run the script from your terminal:
+    ```bash
+    python main.py
+    ```
+4.  Follow the on-screen prompts to choose a difficulty and start guessing!
+
+## What I Learned
+
+This project was a fantastic exercise in:
+-   **Functions:** Encapsulating the main game logic into a reusable `game()` function.
+-   **Loops and Conditionals:** Using `while` loops to manage game flow and `if/elif/else` for game logic.
+-   **User Input:** Handling and validating user input from the command line.
+-   **State Management:** Using a global variable (`u_attempts`) to track the number of remaining attempts.
+-   **Randomization:** Using the `random` module to generate a secret number for each game.
+
+---
+
+## ⚠️ Learning Project Disclaimer
+
+This is a project from my 30-day Python automation learning journey. The code is a reflection of my progress and is not intended to be a final, production-ready application. It was built to practice specific concepts and may contain "messy" or inefficient code as part of the learning process.
