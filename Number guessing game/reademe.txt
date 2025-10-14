@@ -33,4 +33,4 @@ This project was a fantastic exercise in:
 
 ## ⚠️ Learning Project Disclaimer
 
-This is a project from my 30-day Python automation learning journey. The code is a reflection of my progress and is not intended to be a final, production-ready application. It was built to practice specific concepts and may contain "messy" or inefficient code as part of the learning process.
+This is a project from my Python automation learning journey. The code is a reflection of my progress and is not intended to be a final, production-ready application. It was built to practice specific concepts and may contain "messy" or inefficient code as part of the learning process.
