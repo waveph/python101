@@ -19,7 +19,6 @@ def calculate_score(cards):
 
     return sum(cards)
 
-
 def compare(u_score, c_score):
     """compare the two cards"""
     if u_score == c_score:
@@ -36,7 +35,6 @@ def compare(u_score, c_score):
         return "You win"
     else:
         return "You lose"
-
 
 def play_game():
     print(logo.logo())
@@ -71,7 +69,7 @@ def play_game():
         computer_cards.append(deal_card())
         computer_score = calculate_score(computer_cards)
 
-    print(f"You final hand: {user_cards}, final score: {user_score}")
+    print(f"Your final hand: {user_cards}, final score: {user_score}")
     print(f"Computer final hand: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
 
