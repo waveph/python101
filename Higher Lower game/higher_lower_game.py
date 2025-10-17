@@ -1,5 +1,6 @@
 from art import logo, vs
 import game_data
+import random
 
 name = ''
 follower_count = 0
@@ -313,45 +314,60 @@ data = [
 names = ''
 def get_names():
   global names
+  name = []
   for i in data:
-    names = i['name']
-    return names
-print(names)
+    name.append(i['name'])
+  return name
+
 #Create a function to get the 'follower_count'
 followers = 0
 def get_followers():
   global followers
+  followers = []
   for i in data:
-    followers = i['follower_count']
-    return followers
-
+    followers.append(i['follower_count'])
+  return followers
+print(get_followers())
 #Create a function to get the 'description'
 description = ''
 def get_description():
   global description
+  description = []
   for i in data:
-    description = i['description']
-    return description
+    description.append(i['description'])
+  return description
 
 #Create a function to get the 'country'
 country = ''
 def get_country():
   global country
+  country = []
   for i in data:
-    country = i['country']
-    return country
+    country.append(i['country'])
+  return country
 
+score = 0
+for i in range(0,len(data)-1):
 
+  item_a, item_b = random.sample(data, 2)
 
-for i in range(0,len(data)):
   print(logo)
-  print(f"Compare A: {get_names()}, a {get_description()}, from {get_country()}.")
+  print(f'your current score is: {score}')
+  print(f"Compare A: {item_a['name']}, a {item_a['description']}, from {item_a['country']}.")
   print(vs)
-  print(f"Against B: {get_names()}, a {get_description()}, from {get_country()}.")
-  input("Who has more followers? Type 'A' or 'B': ").lower()
+  print(f"Against B: {item_b['name']}, a {item_b['description']}, from {item_b['country']}.")
+  decision = input("Who has more followers? Type 'A' or 'B': ").lower()
 
+  if decision == 'a' and item_a['follower_count'] > item_b['follower_count']:
+    print("that's right!")
+    score += 1
+  elif decision == 'b' and item_b['follower_count'] > item_a['follower_count']:
+    print("that's right!")
+    score += 1
+  else:
+    print("That's wrong!")
 
-
+print(f'your final score is: {score}')
 
 # create a function to compare the followers, if the user chooses the right big followers the function will take the
 #  big's followers name and country and description if not it will break to show the result
