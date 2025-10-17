@@ -1,12 +1,11 @@
+# Import necessary modules for the game's art and data.
 from art import logo, vs
-import game_data
+# Note: game_data is imported but the data is defined directly in this file for this version.
 import random
 
-name = ''
-follower_count = 0
-description =  ''
-country = ''
-
+# --- Game Data ---
+# A list of dictionaries, where each dictionary represents an entity with a social media presence.
+# This data is used to populate the comparison options for the player.
 data = [
   {
     'name': "Instagram",
@@ -310,72 +309,50 @@ data = [
   },
 ]
 
-#Create a function to get the 'name's
-names = ''
-def get_names():
-  global names
-  name = []
-  for i in data:
-    name.append(i['name'])
-  return name
+# --- Game Logic ---
 
-#Create a function to get the 'follower_count'
-followers = 0
-def get_followers():
-  global followers
-  followers = []
-  for i in data:
-    followers.append(i['follower_count'])
-  return followers
-print(get_followers())
-#Create a function to get the 'description'
-description = ''
-def get_description():
-  global description
-  description = []
-  for i in data:
-    description.append(i['description'])
-  return description
-
-#Create a function to get the 'country'
-country = ''
-def get_country():
-  global country
-  country = []
-  for i in data:
-    country.append(i['country'])
-  return country
-
+# Initialize the player's score at the start of the game.
 score = 0
+
+# The main game loop. It runs for a maximum number of rounds based on the data length.
+# Using len(data) - 1 ensures there are enough unique pairs for the entire game.
 for i in range(0,len(data)-1):
 
+  # Randomly select two different items from the data list for comparison.
+  # random.sample is perfect for this as it picks unique items.
   item_a, item_b = random.sample(data, 2)
 
+  # --- Display the Round ---
+  # Clear the screen and display the game's UI for the current round.
   print(logo)
-  print(f'your current score is: {score}')
+  print(f'Your current score is: {score}')
   print(f"Compare A: {item_a['name']}, a {item_a['description']}, from {item_a['country']}.")
   print(vs)
   print(f"Against B: {item_b['name']}, a {item_b['description']}, from {item_b['country']}.")
+
+  # --- Get User Input ---
+  # Prompt the user to make a choice between item A and item B.
   decision = input("Who has more followers? Type 'A' or 'B': ").lower()
 
-  if decision == 'a' and item_a['follower_count'] > item_b['follower_count']:
-    print("that's right!")
-    score += 1
-  elif decision == 'b' and item_b['follower_count'] > item_a['follower_count']:
-    print("that's right!")
+  # --- Input Validation ---
+  # Ensure the user enters a valid choice ('a' or 'b').
+  # The loop will continue to prompt until a valid input is received.
+  while decision != 'a' and decision != 'b':
+      decision = input("Please enter the right choice again 'a' or 'b': ").lower()
+
+  # --- Compare and Determine Result ---
+  # Check if the user's choice matches the entity with the higher follower count.
+  # This single condition covers both possibilities (choosing A or choosing B).
+  if ((decision == 'a' and item_a['follower_count'] > item_b['follower_count']) or
+      (decision == 'b' and item_b['follower_count'] > item_a['follower_count'])):
+    # If the user is correct, increment their score and the game continues.
+    print("That's right!")
     score += 1
   else:
+    # If the user is wrong, print a message and exit the game loop immediately.
     print("That's wrong!")
+    break
 
-print(f'your final score is: {score}')
-
-# create a function to compare the followers, if the user chooses the right big followers the function will take the
-#  big's followers name and country and description if not it will break to show the result
-# create a score counter
-
-# followers = 0
-# def compare_followers():
-#   global followers
-#   if
-#
-
+# --- Game Over ---
+# Once the loop ends (either by a wrong answer or finishing all rounds), display the final score.
+print(f'Your final score is: {score}')
