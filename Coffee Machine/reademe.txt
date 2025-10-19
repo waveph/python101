@@ -1,0 +1,43 @@
+# Python Coffee Machine
+
+A command-line application that simulates the operations of a professional coffee machine. It handles drink orders, manages resources, processes payments, and provides transaction reports. The project is structured across multiple files to demonstrate organized and maintainable code.
+
+## Features
+
+-   **Multi-File Project Structure:** Code is logically separated into `main.py`, `functions.py`, and `menu_resources.py` for clarity and maintainability.
+-   **Interactive Menu:** A user-friendly command-line interface for ordering espresso, latte, or cappuccino.
+-   **Resource Management:** Tracks the inventory of water, milk, and coffee, preventing orders when resources are insufficient.
+-   **Transaction Processing:** Securely handles coin payments (quarters, dimes, nickels, pennies) with input validation.
+-   **Change Calculation:** Automatically calculates and returns the correct change to the user.
+-   **Reporting:** Provides a detailed report of current resource levels and total money earned.
+-   **State Management:** The machine's state (resource levels) persists and updates with each transaction.
+
+## How to Run
+
+1.  Make sure you have Python installed on your system.
+2.  Ensure all three files (`main.py`, `functions.py`, `menu_resources.py`) are in the same directory.
+3.  You will need the `art` package for the logo. Install it with pip:
+    ```bash
+    pip install art
+    ```
+4.  Run the main script from your terminal:
+    ```bash
+    python main.py
+    ```
+5.  Follow the on-screen prompts to place an order or generate a report.
+
+## What I Learned
+
+This project was a comprehensive exercise in:
+-   **Modular Programming:** Structuring a larger application into separate, logical files and functions.
+-   **Data Modeling:** Using nested dictionaries to represent complex data like menus and resources.
+-   **State Management:** Creating a system that maintains and updates a persistent state (the machine's inventory).
+-   **Advanced User Input:** Handling and validating multiple types of user input within a single application flow.
+-   **Control Flow:** Using `while` loops, `if/elif/else` chains, and `try/except` blocks to manage the application's logic and handle errors gracefully.
+-   **Problem Decomposition:** Breaking down a complex problem (a coffee machine) into smaller, manageable functions.
+
+---
+
+## ⚠️ Project Disclaimer
+
+This project is a snapshot of my skills at a specific point in time. While I am aware of areas that could be improved or refactored, I have intentionally left the code as-is. It serves as a functional reference point in my learning journey, demonstrating my ability to build a complete, multi-file application without striving for perfection. The focus here is on progress and functionality.
