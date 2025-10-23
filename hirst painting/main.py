@@ -6,6 +6,7 @@ import random
 # Create a turtle object for drawing.
 tom = Turtle()
 tom.pensize(20)
+tom.hideturtle()
 tom.speed("fastest")
 
 # Create the screen object for our canvas.
@@ -43,9 +44,9 @@ for i in range(10):
         # Lower the pen to the canvas to start drawing.
         tom.pendown()
         # Choose a random color from our list for the current dot.
-        tom.color(random.choice(color_list))
+        # tom.color(random.choice(color_list))
         # Draw a dot with a diameter of 20.
-        tom.dot(20)
+        tom.dot(20, random.choice(color_list))
         # Lift the pen up to move to the next position without drawing a line.
         tom.penup()
         # Increment the x-coordinate to move to the next column.
