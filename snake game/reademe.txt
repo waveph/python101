@@ -1,0 +1,46 @@
+# Snake Game
+
+A classic arcade-style Snake game built with Python's `turtle` library. This project demonstrates a strong understanding of Object-Oriented Programming (OOP), event-driven programming, and game loop logic. It serves as a capstone for the "Game Development" section of my learning journey.
+
+## Features
+
+-   **Object-Oriented Design:** The game is structured around a `Snake` class, a `Food` class, and a `Scoreboard` class, demonstrating a clean separation of concerns.
+-   **Game Loop:** Implements a main loop that handles game state, updates, and rendering.
+-   **Collision Detection:** Accurately detects collisions with the walls and the snake's own body to end the game.
+-   **User Input:** Uses the `screen.onkey()` method to allow the user to control the snake's movement with keyboard input.
+-   **State Management:** Manages the state of the game (score, game over) and updates the display accordingly.
+
+## How to Run
+
+1.  Make sure you have Python installed on your system.
+2.  Ensure you have the `turtle` library, which comes pre-installed with most Python distributions.
+3.  Ensure all four files (`main.py`, `snake.py`, `scoreboard.py`, `food.py`) are in the same directory.
+4.  Run the main script from your terminal:
+    ```bash
+    python main.py
+    ```
+5.  Use the arrow keys to control the snake. Press `c` to close the window.
+
+## What I Learned
+
+This project was a pivotal exercise in:
+-   **Game Loop:** Understanding the core loop that drives an application.
+-   **State Management:** Managing the state of the game (score, game over) and updating the display.
+-   **OOP in Practice:** Creating and managing multiple objects that interact with each other.
+-   **Event-Driven Programming:** Using `screen.listen()` to link user input to game functions.
+-   **Debugging:** Identifying and fixing logical errors in game logic, especially around collision detection.
+
+---
+
+## Project Disclaimer
+
+This project is a key milestone in my journey. It serves as a capstone for the "Game Development" section of my learning journey. It demonstrates my ability to combine multiple concepts into a single, cohesive application. It is a testament to my progress and a solid foundation for any future game development projects.
+
+---
+
+### Future Enhancements
+
+-   - Add different levels with increasing speed.
+-   Implement a high-score system that persists between games.
+-   Add different types of food that give the snake special abilities (e.g., speed boost).
+-   Add sound effects for eating food and game-over events.
