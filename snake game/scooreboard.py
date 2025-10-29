@@ -16,6 +16,7 @@ class Scoreboard(Turtle):
         """Initialize scoreboard with starting score and position"""
         super().__init__()
         self.score = 0
+        self.high_score = 0
         self.color("white")
         self.penup()
         self.goto(0, 265)  # Position at top of screen
@@ -24,15 +25,21 @@ class Scoreboard(Turtle):
 
     def update_score(self):
         """Update the score display on screen"""
-        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+        self.clear()  # Clear previous score
+        self.write(f"Score: {self.score} High Score: {self.high_score}", align=ALIGNMENT, font=FONT)
 
-    def game_over(self):
-        """Display game over message"""
-        self.goto(0, 0)
-        self.write("GAME OVER", align=ALIGNMENT, font=FONT)
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+        self.score = 0
+        self.update_score()
+
+    # def game_over(self):
+    #     """Display game over message"""
+    #     self.goto(0, 0)
+    #     self.write("GAME OVER", align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
         """Increase score by 1 and update display"""
         self.score += 1
-        self.clear()  # Clear previous score
         self.update_score()
