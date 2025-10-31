@@ -1,8 +1,17 @@
 import random
-with open("Users\abdou\OneDrive\Documents\python101\mail merge\Input\Letters") as letter:
-    content = letter.readlines()
-    for name in content:
-      name =
+
+with open(r"\Users\abdou\OneDrive\Documents\python101\mail merge\Input\Letters\starting_letter.txt", "r") as letter:
+    text = letter.readlines()
+
+with open(r"\Users\abdou\OneDrive\Documents\python101\mail merge\Input\Names\invited_names.txt", "r") as names:
+    names = names.readlines()
+
+with open(r"\Users\abdou\OneDrive\Documents\python101\mail merge\Input\Names\invited_names.txt", "a") as names:
+    for i in range(0,len(text)):
+        letters = text[i].replace("[name]", f"{names}")
+
+
+
 
 
 #TODO: Create a letter using starting_letter.txt
