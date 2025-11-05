@@ -36,6 +36,17 @@ while game_is_on:
     answer_state = screen.textinput(title=f"{len_correct_guesses} /50 States Correct",
                                     prompt="What's another state's name?").title()
 
+    # Check if the user wants to exit the game early
+    if answer_state == "Exit":
+        missing_states = []
+        for state in data_states:
+            if state not in correct_guesses:
+                missing_states.append(state)
+        # Save the states to learn in a csv file
+        states_to_learn = pandas.DataFrame(missing_states)
+        states_to_learn.to_csv("states_to_learn.csv", index=False)
+        break
+
     # Check if the guessed state is in the list of states
     if answer_state in data_states:
         # Get the index of the correct state to find its coordinates
@@ -55,5 +66,5 @@ while game_is_on:
     if len(correct_guesses) == len(data_states):
         game_is_on = False
 
-# Keep the screen open until user clicks
-screen.exitonclick()
+
+
