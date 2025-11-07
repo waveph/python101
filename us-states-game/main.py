@@ -38,10 +38,8 @@ while game_is_on:
 
     # Check if the user wants to exit the game early
     if answer_state == "Exit":
-        missing_states = []
-        for state in data_states:
-            if state not in correct_guesses:
-                missing_states.append(state)
+        missing_states = [state for state in data_states if state not in correct_guesses]
+
         # Save the states to learn in a csv file
         states_to_learn = pandas.DataFrame(missing_states)
         states_to_learn.to_csv("states_to_learn.csv", index=False)
