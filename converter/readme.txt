@@ -4,3 +4,5 @@ third day and still in progress on tkinter logic
 
 fourth day so far
 fifth day in and process
+
+hello again it's a little challenging but it will come up
