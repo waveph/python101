@@ -6,3 +6,5 @@ fourth day so far
 fifth day in and process
 
 hello again it's a little challenging but it will come up
+
+hello i am trying everyday to continue improoving
