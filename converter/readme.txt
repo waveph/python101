@@ -8,3 +8,5 @@ fifth day in and process
 hello again it's a little challenging but it will come up
 
 hello i am trying everyday to continue improoving
+
+kug kjg7gf oihiuv ogui iu iou ik ugio
