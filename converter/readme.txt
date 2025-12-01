@@ -12,7 +12,4 @@ hello i am trying everyday to continue improoving
 kug kjg7gf oihiuv ogui iu iou ik ugio
 
 lkhsert bertert ertertb
-ft yhtr hrfthf
-ldkfh glkg lkoaoih glg ie lanfia iaw oag hasifoaehf alfhalf a a
-af koafh a
-a k gh
+ffgnfg gfdk df ir kdrig rids serjsligrs
