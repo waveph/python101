@@ -11,6 +11,5 @@ hello i am trying everyday to continue improoving
 
 kug kjg7gf oihiuv ogui iu iou ik ugioergerge
 
-lkhsert bertert ertertb
 ffgnfg gfdk df ir kdrig rids serjsligrs
-sdefgsdgsd sg dg e edg dg ddfg d dfh tryjhsedhty f rhj fhj
+sdefgsdgsd sg fghfgh fghdfghdfghfghdf f fd f fdghf f f fg fgh e edg dg ddfg d dfh tryjhsedhty f rhj fhj
